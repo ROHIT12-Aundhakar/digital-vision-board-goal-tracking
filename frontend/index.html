@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Digital Vision Board
+  </title>
+
+  <link
+  rel="stylesheet"
+  href="style.css">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+
+  <h2>VisionBoard 🚀</h2>
+
+  <div class="nav-right">
+
+    <p id="welcomeUser">
+
+      Welcome
+
+    </p>
+
+    <button
+    class="logout-btn"
+    onclick="logout()">
+
+      Logout
+
+    </button>
+
+  </div>
+
+  </nav>
+
+    <h2>VisionBoard 🚀</h2>
+
+    <button class="nav-btn">
+      Stay Focused
+    </button>
+
+  </nav>
+
+
+  <div class="container">
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+      <h1>
+        Digital Vision Board
+      </h1>
+
+      <p class="subtitle">
+
+        Visualize your dreams.
+        Track your goals.
+        Achieve success.
+
+      </p>
+
+    </section>
+
+
+    <!-- DASHBOARD STATS -->
+
+    <section class="stats-container">
+
+      <div class="stat-card">
+
+        <h3>Total Goals</h3>
+
+        <p id="totalGoals">0</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>Completed</h3>
+
+        <p id="completedGoals">0</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>In Progress</h3>
+
+        <p id="progressGoals">0</p>
+
+      </div>
+
+    </section>
+
+
+    <!-- MOTIVATIONAL QUOTE -->
+
+    <section class="quote-section">
+
+      <h2>
+        “Success starts with consistency.”
+      </h2>
+
+    </section>
+
+    <!-- ANALYTICS -->
+
+<section class="chart-section">
+
+  <h2>
+    Goal Analytics 📊
+  </h2>
+
+  <canvas id="goalChart"></canvas>
+
+</section>
+
+
+    <!-- GOAL FORM -->
+
+    <div class="goal-form">
+
+      <input
+      type="text"
+      id="goalTitle"
+      placeholder="Enter Goal Title">
+
+      <textarea
+      id="goalDescription"
+      placeholder="Enter Goal Description">
+      </textarea>
+
+      <input
+      type="text"
+      id="goalImage"
+      placeholder="Paste Goal Image URL">
+
+      <input
+      type="date"
+      id="goalDeadline">
+
+      <button onclick="addGoal()">
+
+        Add Goal
+
+      </button>
+
+    </div>
+
+
+    <!-- SEARCH & FILTER -->
+
+    <div class="controls">
+
+      <input
+      type="text"
+      id="searchInput"
+      placeholder="Search Goals..."
+      onkeyup="searchGoals()">
+
+      <div class="filter-buttons">
+
+        <button onclick="fetchGoals()">
+          All
+        </button>
+
+        <button onclick="filterCompleted()">
+          Completed
+        </button>
+
+        <button onclick="filterProgress()">
+          In Progress
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- GOAL CONTAINER -->
+
+    <div
+    id="goalContainer"
+    class="goal-container">
+
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
