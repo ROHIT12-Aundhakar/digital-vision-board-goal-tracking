@@ -459,7 +459,7 @@ async function signup() {
 
     const response =
       await fetch(
-        "https://digital-vision-board-goal-tracking-1.onrender.com/goals/signup",
+        "https://digital-vision-board-goal-tracking-1.onrender.com/signup",
         {
 
           method: "POST",
